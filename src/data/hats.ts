@@ -305,4 +305,4 @@ export const categories = [
 ];
 
 export const conditions = ['All', 'New', 'Like New', 'Good', 'Fair'];
-export const sizes = ['All', 'XS', 'S', 'M', 'L', 'XL', 'One Size'];
+export const sizes = ['All', 'XS', 'S', 'M', 'L', 'XL', 'One Size']; 
