@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Star } from 'lucide-react';
+import { Heart, Star, Globe } from 'lucide-react';
 import { Hat } from '../types';
 
 interface ProductCardProps {
@@ -13,6 +13,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ hat, onLike, onAddToCa
   const discountPercentage = hat.originalPrice 
     ? Math.round(((hat.originalPrice - hat.price) / hat.originalPrice) * 100)
     : 0;
+
+  // Extract region from brand if it's "Traditional"
+  const region = hat.brand === 'Traditional' ? hat.title.split(' ')[0] : null;
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group hover:shadow-lg transition-all duration-300 cursor-pointer">
@@ -40,7 +43,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ hat, onLike, onAddToCa
           </div>
         )}
 
-        <div className="absolute bottom-2 left-2 bg-white px-2 py-1 rounded text-xs font-medium text-gray-700">
+        {region && (
+          <div className="absolute bottom-2 left-2 bg-emerald-600 text-white px-2 py-1 rounded text-xs font-medium flex items-center space-x-1">
+            <Globe className="h-3 w-3" />
+            <span>{region}</span>
+          </div>
+        )}
+
+        <div className="absolute bottom-2 right-2 bg-white px-2 py-1 rounded text-xs font-medium text-gray-700">
           {hat.condition}
         </div>
       </div>
@@ -53,6 +63,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ hat, onLike, onAddToCa
         </div>
 
         <h3 className="font-semibold text-gray-900 mb-1 line-clamp-1">{hat.title}</h3>
+        
+        <p className="text-sm text-gray-600 mb-2 line-clamp-2">{hat.description}</p>
         
         <div className="flex items-center space-x-2 mb-3">
           <span className="text-lg font-bold text-gray-900">${hat.price}</span>

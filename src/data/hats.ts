@@ -3,18 +3,18 @@ import { Hat } from '../types';
 export const hats: Hat[] = [
   {
     id: '1',
-    title: 'Vintage Leather Baseball Cap',
-    price: 45,
-    originalPrice: 89,
+    title: 'Traditional Mongolian Deel Hat',
+    price: 120,
+    originalPrice: 180,
     condition: 'Good',
-    category: 'Baseball Caps',
-    brand: 'Heritage Co.',
+    category: 'Winter Hats',
+    brand: 'Traditional',
     size: 'L',
-    color: 'Brown',
-    description: 'Beautiful vintage leather baseball cap with adjustable strap. Perfect for casual wear with a classic, timeless look.',
+    color: 'Blue & Gold',
+    description: 'Authentic Mongolian deel hat from Ulaanbaatar. Handcrafted by local artisans using traditional techniques. Features intricate embroidery and fox fur trim. A rare find from the steppes of Mongolia.',
     images: [
-      'https://images.pexels.com/photos/8839900/pexels-photo-8839900.jpeg?auto=compress&cs=tinysrgb&w=600',
-      'https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller1',
@@ -28,18 +28,18 @@ export const hats: Hat[] = [
   },
   {
     id: '2',
-    title: 'Artisanal Hand-Knitted Beanie',
-    price: 65,
-    originalPrice: 95,
+    title: 'Peruvian Chullo with Alpaca Wool',
+    price: 85,
+    originalPrice: 120,
     condition: 'New',
-    category: 'Beanies',
-    brand: 'Nordic Knits',
+    category: 'Winter Hats',
+    brand: 'Andean Crafts',
     size: 'One Size',
-    color: 'Forest Green',
-    description: 'Hand-knitted beanie using premium merino wool. Features a unique Nordic pattern and is incredibly warm and soft. Each piece is one-of-a-kind.',
+    color: 'Multicolor',
+    description: 'Hand-knitted chullo from the Sacred Valley of Peru. Made from 100% baby alpaca wool by Quechua artisans. Features traditional Andean patterns and ear flaps. Each pattern tells a unique story.',
     images: [
-      'https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&w=600',
-      'https://images.pexels.com/photos/8839900/pexels-photo-8839900.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller2',
@@ -53,17 +53,17 @@ export const hats: Hat[] = [
   },
   {
     id: '3',
-    title: 'Designer Fedora Hat',
-    price: 120,
-    originalPrice: 180,
-    condition: 'New',
+    title: 'Moroccan Fez Hat',
+    price: 95,
+    originalPrice: 150,
+    condition: 'Good',
     category: 'Fedoras',
-    brand: 'Milano',
+    brand: 'Traditional',
     size: 'M',
-    color: 'Black',
-    description: 'Elegant designer fedora made from premium felt. Perfect for formal occasions or adding sophistication to casual wear.',
+    color: 'Crimson',
+    description: 'Authentic Moroccan fez from the medina of Fes. Handcrafted using traditional methods with natural dyes. Features intricate tassel and detailed embroidery. A piece of North African heritage.',
     images: [
-      'https://images.pexels.com/photos/8839900/pexels-photo-8839900.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller3',
@@ -77,16 +77,17 @@ export const hats: Hat[] = [
   },
   {
     id: '4',
-    title: 'Sustainable Bamboo Bucket Hat',
-    price: 35,
+    title: 'Vietnamese Non La Hat',
+    price: 45,
+    originalPrice: 65,
     condition: 'New',
-    category: 'Bucket Hats',
-    brand: 'EcoStyle',
-    size: 'L',
-    color: 'Khaki',
-    description: 'Eco-friendly bucket hat made from sustainable bamboo fabric. Features UPF 50+ sun protection and is machine washable.',
+    category: 'Sun Hats',
+    brand: 'Traditional',
+    size: 'One Size',
+    color: 'Natural',
+    description: 'Authentic Vietnamese conical hat (Non La) handcrafted in Hoi An. Made from palm leaves using traditional techniques passed down through generations. Features delicate bamboo frame and natural waterproofing.',
     images: [
-      'https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller4',
@@ -100,18 +101,18 @@ export const hats: Hat[] = [
   },
   {
     id: '5',
-    title: 'Artistic Hand-Painted Sun Hat',
-    price: 85,
-    originalPrice: 120,
+    title: 'Ecuadorian Panama Hat',
+    price: 150,
+    originalPrice: 250,
     condition: 'New',
     category: 'Sun Hats',
-    brand: 'Artisan Collective',
+    brand: 'Montecristi',
     size: 'M',
-    color: 'Multicolor',
-    description: 'Unique hand-painted sun hat featuring original artwork. Each hat is a wearable piece of art, perfect for making a statement.',
+    color: 'Natural',
+    description: 'Genuine Montecristi Panama hat from Ecuador. Hand-woven by master artisans using the finest toquilla straw. Takes over 3 months to create. Features the traditional "superfino" weave pattern.',
     images: [
-      'https://images.pexels.com/photos/8839900/pexels-photo-8839900.jpeg?auto=compress&cs=tinysrgb&w=600',
-      'https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller5',
@@ -125,16 +126,17 @@ export const hats: Hat[] = [
   },
   {
     id: '6',
-    title: 'Vintage Military Cap',
-    price: 65,
+    title: 'Tibetan Nomad Hat',
+    price: 110,
+    originalPrice: 160,
     condition: 'Good',
-    category: 'Baseball Caps',
-    brand: 'Army Surplus',
+    category: 'Winter Hats',
+    brand: 'Traditional',
     size: 'L',
-    color: 'Olive Green',
-    description: 'Authentic vintage military cap with unique character. Perfect for collectors or those who love military-inspired fashion.',
+    color: 'Brown & Red',
+    description: 'Authentic Tibetan nomad hat from the highlands. Made from yak wool and decorated with traditional symbols. Features colorful tassels and protective amulets. A rare piece from the roof of the world.',
     images: [
-      'https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller6',
@@ -148,17 +150,17 @@ export const hats: Hat[] = [
   },
   {
     id: '7',
-    title: 'Limited Edition Artist Collaboration Cap',
-    price: 95,
-    originalPrice: 150,
+    title: 'Mexican Charro Sombrero',
+    price: 180,
+    originalPrice: 250,
     condition: 'New',
-    category: 'Baseball Caps',
-    brand: 'Street Art Collective',
-    size: 'M',
-    color: 'Black & Gold',
-    description: 'Exclusive collaboration with renowned street artist. Features unique embroidery and limited edition numbering. Only 100 pieces made.',
+    category: 'Sun Hats',
+    brand: 'Traditional',
+    size: 'L',
+    color: 'Black & Silver',
+    description: 'Authentic Mexican charro sombrero from Jalisco. Handcrafted by master sombrereros using traditional techniques. Features intricate silver embroidery and genuine horsehair details. A true piece of Mexican heritage.',
     images: [
-      'https://images.pexels.com/photos/8839900/pexels-photo-8839900.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller7',
@@ -172,17 +174,17 @@ export const hats: Hat[] = [
   },
   {
     id: '8',
-    title: 'Handcrafted Felt Cloche Hat',
-    price: 145,
-    originalPrice: 195,
-    condition: 'New',
+    title: 'Russian Ushanka',
+    price: 95,
+    originalPrice: 140,
+    condition: 'Good',
     category: 'Winter Hats',
-    brand: 'Artisan Millinery',
+    brand: 'Traditional',
     size: 'M',
-    color: 'Burgundy',
-    description: 'Exquisitely crafted felt cloche hat with vintage-inspired details. Made by master milliners using traditional techniques.',
+    color: 'Brown',
+    description: 'Authentic Russian ushanka from Siberia. Made from genuine rabbit fur with leather details. Features the classic ear flaps and Soviet-era military style. A piece of Russian winter heritage.',
     images: [
-      'https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller8',
@@ -196,17 +198,17 @@ export const hats: Hat[] = [
   },
   {
     id: '9',
-    title: 'Sustainable Straw Panama Hat',
-    price: 75,
-    originalPrice: 110,
-    condition: 'New',
-    category: 'Sun Hats',
-    brand: 'EcoLux',
-    size: 'L',
-    color: 'Natural',
-    description: 'Hand-woven Panama hat made from sustainable toquilla straw. Features a modern twist on a classic design with a leather band.',
+    title: 'Korean Gat',
+    price: 200,
+    originalPrice: 300,
+    condition: 'Good',
+    category: 'Fedoras',
+    brand: 'Traditional',
+    size: 'M',
+    color: 'Black',
+    description: 'Authentic Korean traditional hat (Gat) from the Joseon period. Made from horsehair and bamboo. Features the distinctive cylindrical shape and delicate weaving. A rare piece of Korean cultural heritage.',
     images: [
-      'https://images.pexels.com/photos/8839900/pexels-photo-8839900.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller9',
@@ -220,17 +222,17 @@ export const hats: Hat[] = [
   },
   {
     id: '10',
-    title: 'Tech-Enhanced Smart Beanie',
-    price: 89,
-    originalPrice: 129,
+    title: 'Scottish Tam O\'Shanter',
+    price: 75,
+    originalPrice: 110,
     condition: 'New',
-    category: 'Beanies',
-    brand: 'TechWear',
+    category: 'Winter Hats',
+    brand: 'Traditional',
     size: 'One Size',
-    color: 'Charcoal',
-    description: 'Innovative smart beanie with built-in Bluetooth speakers and touch controls. Made from premium merino wool with conductive thread technology.',
+    color: 'Navy',
+    description: 'Authentic Scottish Tam O\'Shanter from the Highlands. Made from premium wool with traditional clan tartan. Features the classic pom-pom and hand-stitched details. A piece of Scottish heritage.',
     images: [
-      'https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller10',
@@ -244,17 +246,17 @@ export const hats: Hat[] = [
   },
   {
     id: '11',
-    title: 'Vintage-inspired Newsboy Cap',
-    price: 55,
-    originalPrice: 85,
+    title: 'Indonesian Songkok',
+    price: 45,
+    originalPrice: 65,
     condition: 'New',
-    category: 'Winter Hats',
-    brand: 'Heritage Collection',
+    category: 'Fedoras',
+    brand: 'Traditional',
     size: 'M',
-    color: 'Tweed',
-    description: 'Classic newsboy cap made from premium tweed fabric. Features a timeless design with modern comfort and durability.',
+    color: 'Black',
+    description: 'Traditional Indonesian Songkok from Java. Handcrafted using premium velvet and traditional techniques. Features the distinctive shape and cultural significance. A piece of Indonesian heritage.',
     images: [
-      'https://images.pexels.com/photos/8839900/pexels-photo-8839900.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller11',
@@ -268,17 +270,17 @@ export const hats: Hat[] = [
   },
   {
     id: '12',
-    title: 'Artistic Embroidered Bucket Hat',
-    price: 45,
-    originalPrice: 65,
-    condition: 'New',
-    category: 'Bucket Hats',
-    brand: 'Urban Art',
-    size: 'One Size',
-    color: 'Denim',
-    description: 'Hand-embroidered bucket hat featuring unique street art designs. Made from upcycled denim with sustainable practices.',
+    title: 'Greek Fisherman\'s Cap',
+    price: 55,
+    originalPrice: 85,
+    condition: 'Good',
+    category: 'Baseball Caps',
+    brand: 'Traditional',
+    size: 'M',
+    color: 'Navy',
+    description: 'Authentic Greek fisherman\'s cap from the Aegean Islands. Made from traditional wool with leather details. Features the classic shape and hand-stitched elements. A piece of Mediterranean maritime heritage.',
     images: [
-      'https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller12',

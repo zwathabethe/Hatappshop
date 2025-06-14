@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Heart, Star, Shield, Truck, RotateCcw } from 'lucide-react';
+import { ArrowLeft, Heart, Star, Shield, Truck, RotateCcw, Globe, Info } from 'lucide-react';
 import { Hat } from '../types';
 
 interface ProductDetailProps {
@@ -15,6 +15,9 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ hat, onBack, onAdd
   const discountPercentage = hat.originalPrice 
     ? Math.round(((hat.originalPrice - hat.price) / hat.originalPrice) * 100)
     : 0;
+
+  // Extract region from brand if it's "Traditional"
+  const region = hat.brand === 'Traditional' ? hat.title.split(' ')[0] : null;
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -63,7 +66,15 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ hat, onBack, onAdd
         <div className="space-y-6">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-500">{hat.brand}</span>
+              <div className="flex items-center space-x-2">
+                <span className="text-sm text-gray-500">{hat.brand}</span>
+                {region && (
+                  <div className="flex items-center space-x-1 bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full text-xs">
+                    <Globe className="h-3 w-3" />
+                    <span>{region}</span>
+                  </div>
+                )}
+              </div>
               <button
                 onClick={() => onLike(hat.id)}
                 className={`p-2 rounded-full ${
@@ -105,6 +116,17 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ hat, onBack, onAdd
               </span>
             </div>
           </div>
+
+          {/* Cultural Heritage Section */}
+          {region && (
+            <div className="bg-emerald-50 rounded-lg p-4 border border-emerald-100">
+              <div className="flex items-center space-x-2 mb-2">
+                <Info className="h-5 w-5 text-emerald-600" />
+                <h3 className="font-semibold text-emerald-800">Cultural Heritage</h3>
+              </div>
+              <p className="text-emerald-700 text-sm">{hat.description}</p>
+            </div>
+          )}
 
           {/* Seller Info */}
           <div className="border border-gray-200 rounded-lg p-4">
@@ -151,12 +173,6 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ hat, onBack, onAdd
               <RotateCcw className="h-6 w-6 text-emerald-600 mx-auto mb-2" />
               <p className="text-xs text-gray-600">Easy Returns</p>
             </div>
-          </div>
-
-          {/* Description */}
-          <div className="pt-6 border-t border-gray-200">
-            <h3 className="font-semibold text-gray-900 mb-3">Description</h3>
-            <p className="text-gray-700 leading-relaxed">{hat.description}</p>
           </div>
         </div>
       </div>
