@@ -7,6 +7,7 @@ import { Cart } from './components/Cart';
 import { Wishlist } from './components/Wishlist';
 import { Notifications } from './components/Notifications';
 import { Reviews } from './components/Reviews';
+import { SellHat } from './components/SellHat';
 import { hats } from './data/hats';
 import { Hat, CartItem } from './types';
 import { Filter } from 'lucide-react';
@@ -24,6 +25,7 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isWishlistOpen, setIsWishlistOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [isSellOpen, setIsSellOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [wishlistItems, setWishlistItems] = useState<Hat[]>([]);
   const [notifications, setNotifications] = useState([
@@ -160,6 +162,38 @@ function App() {
 
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
+  const handleSellHat = (hatData: Omit<Hat, 'id' | 'seller' | 'createdAt' | 'liked'>) => {
+    const newHat: Hat = {
+      ...hatData,
+      id: `hat-${Date.now()}`,
+      seller: {
+        id: 'current-user',
+        name: 'Current User',
+        avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100',
+        rating: 5.0,
+        reviews: 0
+      },
+      createdAt: new Date().toISOString().split('T')[0],
+      liked: false
+    };
+
+    setProducts([newHat, ...products]);
+    setIsSellOpen(false);
+
+    // Add notification for new listing
+    setNotifications([
+      {
+        id: `notification-${Date.now()}`,
+        type: 'new-item',
+        title: 'Your Hat is Listed!',
+        message: `Your ${newHat.title} is now live on the marketplace.`,
+        timestamp: 'Just now',
+        read: false,
+      },
+      ...notifications
+    ]);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header
@@ -169,6 +203,7 @@ function App() {
         onWishlistClick={() => setIsWishlistOpen(true)}
         onNotificationsClick={() => setIsNotificationsOpen(true)}
         notificationCount={notifications.filter(n => !n.read).length}
+        onSellClick={() => setIsSellOpen(true)}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -302,6 +337,14 @@ function App() {
             />
           </div>
         </div>
+      )}
+
+      {/* Sell Hat Modal */}
+      {isSellOpen && (
+        <SellHat
+          onSubmit={handleSellHat}
+          onClose={() => setIsSellOpen(false)}
+        />
       )}
     </div>
   );

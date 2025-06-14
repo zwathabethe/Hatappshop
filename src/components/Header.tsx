@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ShoppingBag, User, Heart, Menu, X, ShoppingCart, Bell } from 'lucide-react';
+import { Search, ShoppingBag, User, Heart, Menu, X, ShoppingCart, Bell, Plus } from 'lucide-react';
 
 interface HeaderProps {
   onSearch: (query: string) => void;
@@ -8,6 +8,7 @@ interface HeaderProps {
   onWishlistClick: () => void;
   onNotificationsClick: () => void;
   notificationCount: number;
+  onSellClick: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -17,6 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   onWishlistClick,
   onNotificationsClick,
   notificationCount,
+  onSellClick,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -59,6 +61,23 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Navigation Icons */}
           <div className="flex items-center space-x-4">
+            {/* Sell Button */}
+            <button
+              onClick={onSellClick}
+              className="hidden md:flex items-center space-x-2 bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
+            >
+              <Plus className="h-5 w-5" />
+              <span>Sell</span>
+            </button>
+
+            {/* Mobile Sell Button */}
+            <button
+              onClick={onSellClick}
+              className="md:hidden bg-emerald-600 text-white p-2 rounded-lg hover:bg-emerald-700 transition-colors"
+            >
+              <Plus className="h-5 w-5" />
+            </button>
+
             <button
               onClick={onWishlistClick}
               className="p-2 text-gray-600 hover:text-gray-900 relative"
