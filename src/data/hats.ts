@@ -13,8 +13,8 @@ export const hats: Hat[] = [
     color: 'Blue & Gold',
     description: 'Authentic Mongolian deel hat from Ulaanbaatar. Handcrafted by local artisans using traditional techniques. Features intricate embroidery and fox fur trim. A rare find from the steppes of Mongolia.',
     images: [
-      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80',
-      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'
+      'https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=600&q=80'
     ],
     seller: {
       id: 'seller1',
